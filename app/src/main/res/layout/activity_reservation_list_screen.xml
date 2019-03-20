@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/reservationListScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/colorGrey"
-    android:layout_height="match_parent">
+    android:orientation="vertical">
+
 
     <TextView
         android:id="@+id/pmReservationList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:lineSpacingExtra="10sp"
         android:padding="8dp"
-        android:layout_marginTop="10dp"
         android:text="Reservation List Screen"
         android:textAlignment="center"
         android:textColor="@color/colorNavyBlue"
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/pmRLText1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:textSize="16sp"
-        android:text="Start TIme : 14:00     End Time : 15:00" />
+        android:text="Start TIme : 10:00     End Time : 11:30" />
 
     <TextView
         android:id="@+id/textView5"
@@ -40,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:textSize="16sp"
-        android:text="Parking Area Name : West Garage" />
+        android:text="Parking Area Name : Maverick" />
 
     <TextView
         android:id="@+id/textView6"
@@ -48,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:textSize="16sp"
-        android:text="Parking Spot Number : 12" />
+        android:text="Parking Spot Number : 012" />
 
     <Button
         android:id="@+id/button1"
@@ -57,40 +61,40 @@
         android:layout_marginStart="20dp"
         android:background="@color/colorPrimary"
         android:padding="8dp"
-        android:text="Delete" />
+        android:text="Delete" />-->
 
     <TextView
         android:id="@+id/pmRLText2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
-        android:textSize="16sp"
-        android:text="Reservation ID : 00021" />
+        android:layout_marginTop="10dp"
+        android:text="Reservation ID : 00121"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:textSize="16sp"
-        android:text="Start TIme : 14:00     End Time : 15:00" />
+        android:text="Start TIme : 14:00     End Time : 15:30"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:textSize="16sp"
-        android:text="Parking Area Name : West Garage" />
+        android:text="Parking Area Name : West Garage"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textViewTemp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:textSize="16sp"
-        android:text="Parking Spot Number : 12" />
+        android:text="Parking Spot Number : 121"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/button2"
@@ -105,34 +109,34 @@
         android:id="@+id/pmRLText3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
-        android:textSize="16sp"
-        android:text="Reservation ID : 00021" />
+        android:layout_marginTop="10dp"
+        android:text="Reservation ID : 02021"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textViewnew"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:textSize="16sp"
-        android:text="Start TIme : 14:00     End Time : 15:00" />
+        android:text="Start TIme : 08:00     End Time : 10:00"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:textSize="16sp"
-        android:text="Parking Area Name : West Garage" />
+        android:text="Parking Area Name : Davis"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textViewTemp1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:textSize="16sp"
-        android:text="Parking Spot Number : 12" />
+        android:text="Parking Spot Number : 062"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/button3"
@@ -147,34 +151,34 @@
         android:id="@+id/pmRLText5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
-        android:textSize="16sp"
-        android:text="Reservation ID : 00021" />
+        android:layout_marginTop="10dp"
+        android:text="Reservation ID : 08021"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textViewnew1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:textSize="16sp"
-        android:text="Start TIme : 14:00     End Time : 15:00" />
+        android:text="Start TIme : 13:00     End Time : 14:30"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:textSize="16sp"
-        android:text="Parking Area Name : West Garage" />
+        android:text="Parking Area Name : Nedderman"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textViewTemp2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:textSize="16sp"
-        android:text="Parking Spot Number : 12" />
+        android:text="Parking Spot Number : 143"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/button4"
@@ -184,5 +188,17 @@
         android:background="@color/colorPrimary"
         android:padding="8dp"
         android:text="Delete" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Deleted Successfully!"
+        android:textAlignment="center"
+        android:textColor="@color/colorNavyBlue"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
 </LinearLayout>
