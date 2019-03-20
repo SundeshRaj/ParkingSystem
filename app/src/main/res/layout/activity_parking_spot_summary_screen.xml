@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey">
+
+    <TextView
+        android:id="@+id/pmParkingSpotSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="10sp"
+        android:padding="8dp"
+        android:text="Parking Spot Summary"
+        android:textAlignment="center"
+        android:textColor="@color/colorNavyBlue"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/pmParkingSpotDetailsAvailability"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:textSize="16sp"
+        android:text="Status : Available" />
+
+    <TextView
+        android:id="@+id/pmParkingSpotDetailsText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="16sp"
+        android:text="Username : sundesh" />
+
+    <TextView
+        android:id="@+id/pmParkingSpotDetailsText0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="16sp"
+        android:text="UTA ID : 1001633297" />
+
+    <TextView
+        android:id="@+id/pmParkingSpotDetailsFName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="16sp"
+        android:text="Last Name : Raj" />
+
+    <TextView
+        android:id="@+id/pmParkingSpotDetailsLName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="16sp"
+        android:text="First Name : Sundesh" />
+
+    <TextView
+        android:id="@+id/pmParkingSpotDetailsText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="16sp"
+        android:text="Duration : 1hr 30min" />
+
+    <TextView
+        android:id="@+id/pmParkingSpotDetailsText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="16sp"
+        android:text="Start TIme : 10:00" />
+
+    <TextView
+        android:id="@+id/pmParkingSpotDetailsText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="16sp"
+        android:text="Parking Area Name : Maverick" />
+
+    <TextView
+        android:id="@+id/pmParkingSpotDetailsText4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="16sp"
+        android:text="Parking Spot Number : 012" />
+
+    <Button
+        android:id="@+id/pmParkingSpotDetailsMakeUnavailable"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary"
+        android:padding="8dp"
+        android:text="Make Spot Unavailable" />
+
+    <Button
+        android:id="@+id/pmParkingSpotDetailsSuccessMessage"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="Parking Spot Made Unavailable!!"
+        android:textAlignment="center"
+        android:textColor="@color/colorNavyBlue"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
