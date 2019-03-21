@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/parkingmanagerhomescreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="10sp"
+        android:padding="8dp"
+        android:text="Search Parking"
+        android:textAlignment="center"
+        android:textColor="@color/colorNavyBlue"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:hint="7:00"
+        android:inputType="time"
+        android:textAllCaps="false"
+        android:textIsSelectable="true"
+        android:textStyle="bold|italic" />
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:hint="8:00"
+        android:inputType="time"
+        android:textStyle="bold|italic" />
+
+    <EditText
+        android:id="@+id/editText7"
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:hint="West Garage"
+        android:inputType="time"
+        android:textStyle="bold|italic" />
+
+    <EditText
+        android:id="@+id/editText8"
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:hint="Second"
+        android:inputType="time"
+        android:textStyle="bold|italic" />
+
+    <EditText
+        android:id="@+id/editText9"
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:hint="Basic"
+        android:inputType="time"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/button21"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:background="@color/colorPrimary"
+        android:padding="15dp"
+        android:text="Search Spot"
+        android:textStyle="bold"/>
+
+
+
+</LinearLayout>
