@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorGrey">
+    android:background="@color/colorGrey" >
 
     <TextView
         android:id="@+id/pmParkingSpotSummary"
@@ -80,7 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:textSize="16sp"
-        android:text="Parking Area Name : Maverick" />
+        android:text="Parking Area Name : West Garage" />
 
     <TextView
         android:id="@+id/pmParkingSpotDetailsText4"
@@ -89,6 +89,22 @@
         android:layout_marginStart="20dp"
         android:textSize="16sp"
         android:text="Parking Spot Number : 012" />
+
+    <TextView
+        android:id="@+id/pmParkingSpotDetailsText5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="16sp"
+        android:text="Parking Type : Access" />
+
+    <TextView
+        android:id="@+id/pmParkingSpotDetailsText6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="16sp"
+        android:text="Floor : 1" />
 
     <Button
         android:id="@+id/pmParkingSpotDetailsMakeUnavailable"
