@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="@color/colorGrey"
-android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/parkingmanagerhomescreen"
@@ -25,8 +25,8 @@ android:orientation="vertical">
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"
-        android:hint="START TIME"
         android:gravity="center_horizontal"
+        android:hint="START TIME"
         android:inputType="time"
         android:textAllCaps="false"
         android:textIsSelectable="true"
@@ -38,9 +38,9 @@ android:orientation="vertical">
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"
+        android:gravity="center_horizontal"
         android:hint="END TIME"
         android:inputType="time"
-        android:gravity="center_horizontal"
         android:textStyle="italic" />
 
     <EditText
@@ -49,8 +49,8 @@ android:orientation="vertical">
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"
-        android:hint="PARKING AREA"
         android:gravity="center_horizontal"
+        android:hint="PARKING AREA"
         android:inputType="time"
         android:textStyle="italic" />
 
@@ -60,8 +60,8 @@ android:orientation="vertical">
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"
-        android:hint="PARKING FLOOR"
         android:gravity="center_horizontal"
+        android:hint="PARKING FLOOR"
         android:inputType="time"
         android:textStyle="italic" />
 
@@ -82,10 +82,10 @@ android:orientation="vertical">
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:gravity="center_horizontal"
         android:background="@color/colorPrimary"
+        android:gravity="center_horizontal"
         android:padding="15dp"
         android:text="Search Spot"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
 </LinearLayout>
