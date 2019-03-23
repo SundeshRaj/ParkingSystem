@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey" >
+
+    <TextView
+        android:id="@+id/loginPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="10sp"
+        android:padding="8dp"
+        android:text="Login"
+        android:textAlignment="center"
+        android:textColor="@color/colorNavyBlue"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp" >
+        <TextView
+            android:id="@+id/loginPageText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:lineSpacingExtra="10sp"
+            android:textColor="@color/colorNavyBlue"
+            android:textSize="26sp"
+            android:text="Username:" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:ems="10"
+            android:textSize="26sp"
+            android:inputType="textPersonName"
+            android:text="sundesh" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp" >
+        <TextView
+            android:id="@+id/loginPageText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:lineSpacingExtra="10sp"
+            android:textColor="@color/colorNavyBlue"
+            android:textSize="26sp"
+            android:text="Password:" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:ems="10"
+            android:textSize="26sp"
+            android:inputType="textPersonName"
+            android:text="****************" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:padding="15dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:text="Login" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:autoLink="web"
+        android:linksClickable="true"
+        android:layout_marginTop="30dp"
+        android:lineSpacingExtra="10sp"
+        android:textColor="@color/colorRed"
+        android:textSize="26sp"
+        android:text="No account yet? Register!" />
+
+</LinearLayout>

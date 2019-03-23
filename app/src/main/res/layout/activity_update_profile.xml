@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey" >
+
+    <TextView
+        android:id="@+id/updateProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="10sp"
+        android:padding="8dp"
+        android:text="Update Profile"
+        android:textAlignment="center"
+        android:textColor="@color/colorNavyBlue"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+        <TextView
+            android:id="@+id/registrationPageText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:lineSpacingExtra="10sp"
+            android:textColor="@color/colorNavyBlue"
+            android:textSize="14sp"
+            android:text="Username:" />
+
+        <EditText
+            android:id="@+id/registrationPageEditText1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:ems="10"
+            android:textSize="14sp"
+            android:inputType="textPersonName"
+            android:text="avinash" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+        <TextView
+            android:id="@+id/registrationPageText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:lineSpacingExtra="10sp"
+            android:textColor="@color/colorNavyBlue"
+            android:textSize="14sp"
+            android:text="Password:" />
+
+        <EditText
+            android:id="@+id/registrationPageEditText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:ems="10"
+            android:textSize="14sp"
+            android:inputType="textPersonName"
+            android:text="***********" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+        <TextView
+            android:id="@+id/registrationPageText3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:lineSpacingExtra="10sp"
+            android:textColor="@color/colorNavyBlue"
+            android:textSize="14sp"
+            android:text="Last Name:" />
+
+        <EditText
+            android:id="@+id/registrationPageEditText3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:ems="10"
+            android:textSize="14sp"
+            android:inputType="textPersonName"
+            android:text="Shanker" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+        <TextView
+            android:id="@+id/registrationPageText4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:lineSpacingExtra="10sp"
+            android:textColor="@color/colorNavyBlue"
+            android:textSize="14sp"
+            android:text="First Name:" />
+
+        <EditText
+            android:id="@+id/registrationPageEditText4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:ems="10"
+            android:textSize="14sp"
+            android:inputType="textPersonName"
+            android:text="Avinash" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+        <TextView
+            android:id="@+id/registrationPageText5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:lineSpacingExtra="10sp"
+            android:textColor="@color/colorNavyBlue"
+            android:textSize="14sp"
+            android:text="Phone" />
+
+        <EditText
+            android:id="@+id/registrationPageEditText5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:ems="10"
+            android:textSize="14sp"
+            android:inputType="textPersonName"
+            android:text="746352784" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+        <TextView
+            android:id="@+id/registrationPageText6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:lineSpacingExtra="10sp"
+            android:textColor="@color/colorNavyBlue"
+            android:textSize="14sp"
+            android:text="UTA ID:" />
+
+        <EditText
+            android:id="@+id/registrationPageEditText6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:ems="10"
+            android:textSize="14sp"
+            android:inputType="textPersonName"
+            android:text="1001675333" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+        <TextView
+            android:id="@+id/registrationPageText7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:lineSpacingExtra="10sp"
+            android:textColor="@color/colorNavyBlue"
+            android:textSize="14sp"
+            android:text="Email :" />
+
+        <EditText
+            android:id="@+id/registrationPageEditText7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:ems="10"
+            android:textSize="14sp"
+            android:inputType="textPersonName"
+            android:text="avinash.shanker@mavs.uta.edu" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+        <TextView
+            android:id="@+id/registrationPageText8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:lineSpacingExtra="10sp"
+            android:textColor="@color/colorNavyBlue"
+            android:textSize="14sp"
+            android:text="Street :" />
+
+        <EditText
+            android:id="@+id/registrationPageEditText8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:ems="10"
+            android:textSize="14sp"
+            android:inputType="textPersonName"
+            android:text="404 E Border St" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+        <TextView
+            android:id="@+id/registrationPageText9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:lineSpacingExtra="10sp"
+            android:textColor="@color/colorNavyBlue"
+            android:textSize="14sp"
+            android:text="City :" />
+
+        <EditText
+            android:id="@+id/registrationPageEditText9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:ems="10"
+            android:textSize="14sp"
+            android:inputType="textPersonName"
+            android:text="Arlington" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+        <TextView
+            android:id="@+id/registrationPageText10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:lineSpacingExtra="10sp"
+            android:textColor="@color/colorNavyBlue"
+            android:textSize="14sp"
+            android:text="State :" />
+
+        <EditText
+            android:id="@+id/registrationPageEditText10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:ems="10"
+            android:textSize="14sp"
+            android:inputType="textPersonName"
+            android:text="Arlington" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:text="Update" />
+
+</LinearLayout>

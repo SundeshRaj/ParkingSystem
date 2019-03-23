@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/systemUserProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="10sp"
+        android:padding="8dp"
+        android:text="Profile"
+        android:textAlignment="center"
+        android:textColor="@color/colorNavyBlue"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/pmParkingSpotDetailsText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:textSize="22sp"
+        android:text="Username : sundesh" />
+
+    <TextView
+        android:id="@+id/pmParkingSpotDetailsText33"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="22sp"
+        android:text="Password : ***********" />
+
+    <TextView
+        android:id="@+id/pmParkingSpotDetailsText0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="22sp"
+        android:text="UTA ID : 1001633297" />
+
+    <TextView
+        android:id="@+id/pmParkingSpotDetailsFName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="22sp"
+        android:text="Last Name : Raj" />
+
+    <TextView
+        android:id="@+id/pmParkingSpotDetailsLName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="22sp"
+        android:text="First Name : Sundesh" />
+
+    <TextView
+        android:id="@+id/pmParkingSpotDetailsText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="22sp"
+        android:text="Email : sundesh.raj@mavs.uta.edu" />
+
+    <TextView
+        android:id="@+id/pmParkingSpotDetailsText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="22sp"
+        android:text="Role : Admin" />
+
+    <TextView
+        android:id="@+id/pmParkingSpotDetailsText4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="22sp"
+        android:text="Phone : 6823470670" />
+
+    <TextView
+        android:id="@+id/pmParkingSpotDetailsText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="22sp"
+        android:text="Street : 404 E Border St" />
+
+    <TextView
+        android:id="@+id/pmParkingSpotDetailsText5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="22sp"
+        android:text="City : Arlington" />
+
+    <TextView
+        android:id="@+id/pmParkingSpotDetailsText6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="22sp"
+        android:text="State : Texas" />
+
+    <!--<TextView
+        android:id="@+id/pmParkingSpotDetailsText7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="22sp"
+        android:text="Licence Plate : TTK 7655" />-->
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:padding="15dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:text="Update Profile" />
+
+</LinearLayout>
