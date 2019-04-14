@@ -13,7 +13,7 @@
         android:layout_marginTop="10dp"
         android:lineSpacingExtra="10sp"
         android:padding="8dp"
-        android:text="Search Parking"
+        android:text="Search Parking Spot"
         android:textAlignment="center"
         android:textColor="@color/colorNavyBlue"
         android:textSize="24sp"
@@ -26,7 +26,7 @@
         android:layout_gravity="center"
         android:ems="10"
         android:gravity="center_horizontal"
-        android:hint="START TIME"
+        android:hint="07:00"
         android:inputType="time"
         android:textAllCaps="false"
         android:textIsSelectable="true"
@@ -39,7 +39,7 @@
         android:layout_gravity="center"
         android:ems="10"
         android:gravity="center_horizontal"
-        android:hint="END TIME"
+        android:hint="08:00"
         android:inputType="time"
         android:textStyle="italic" />
 
@@ -50,7 +50,7 @@
         android:layout_gravity="center"
         android:ems="10"
         android:gravity="center_horizontal"
-        android:hint="PARKING AREA"
+        android:hint="West Garage"
         android:inputType="time"
         android:textStyle="italic" />
 
@@ -61,7 +61,18 @@
         android:layout_gravity="center"
         android:ems="10"
         android:gravity="center_horizontal"
-        android:hint="PARKING FLOOR"
+        android:hint="Second"
+        android:inputType="time"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/editText72"
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="012"
         android:inputType="time"
         android:textStyle="italic" />
 
@@ -72,7 +83,7 @@
         android:layout_gravity="center"
         android:ems="10"
         android:gravity="center_horizontal"
-        android:hint="PARKING TYPE"
+        android:hint="Basic"
         android:inputType="time"
         android:textStyle="italic" />
 
@@ -85,7 +96,7 @@
         android:background="@color/colorPrimary"
         android:gravity="center_horizontal"
         android:padding="15dp"
-        android:text="Search Spot"
+        android:text="Search"
         android:textStyle="bold" />
 
 </LinearLayout>

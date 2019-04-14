@@ -13,7 +13,7 @@
         android:layout_marginTop="10dp"
         android:lineSpacingExtra="10sp"
         android:padding="8dp"
-        android:text="Search Parking"
+        android:text="Modify Parking"
         android:textAlignment="center"
         android:textColor="@color/colorNavyBlue"
         android:textSize="24sp"
@@ -29,7 +29,15 @@
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewlkasdf3333"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Time : 07:00 - 08:00"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textViewlkasdf"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -37,7 +45,7 @@
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewuueiwsd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -45,11 +53,19 @@
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewlkajsdf"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:text="Spot No : 13"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textViewlkajsdf876"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Options Selected : Camera"
         android:textSize="16sp" />
 
     <TextView
@@ -60,16 +76,14 @@
         android:text="Parking Fee : $20"
         android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/textView7"
+    <Button
+        android:id="@+id/button7"
         android:layout_width="350dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="Successfully Reserved!!"
-        android:textAlignment="center"
-        android:textColor="@color/colorNavyBlue"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:text="Modified Successfully!!" />
 
 </LinearLayout>

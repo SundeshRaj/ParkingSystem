@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorGrey" >
+    android:background="@color/colorGrey"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/loginPage"
@@ -16,79 +17,87 @@
         android:textColor="@color/colorNavyBlue"
         android:textSize="30sp"
         android:textStyle="bold" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp" >
+        android:layout_marginTop="40dp">
+
         <TextView
             android:id="@+id/loginPageText1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:lineSpacingExtra="10sp"
+            android:text="Username:"
             android:textColor="@color/colorNavyBlue"
-            android:textSize="26sp"
-            android:text="Username:" />
+            android:textSize="26sp" />
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/etLoginUsername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
+            android:layout_marginEnd="8dp"
             android:ems="10"
-            android:textSize="26sp"
             android:inputType="textPersonName"
-            android:text="sundesh" />
+            android:hint="username"
+            android:textSize="26sp" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp" >
+        android:layout_marginTop="40dp">
+
         <TextView
             android:id="@+id/loginPageText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:lineSpacingExtra="10sp"
+            android:text="Password:"
             android:textColor="@color/colorNavyBlue"
-            android:textSize="26sp"
-            android:text="Password:" />
+            android:textSize="26sp" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/etLoginPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
+            android:layout_marginEnd="8dp"
             android:ems="10"
-            android:textSize="26sp"
-            android:inputType="textPersonName"
-            android:text="****************" />
+            android:inputType="textPassword"
+            android:hint="password"
+            android:textSize="26sp" />
     </LinearLayout>
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:background="@color/colorPrimary"
         android:padding="15dp"
+        android:onClick="onButtonClick"
+        android:text="Login"
         android:textColor="@color/colorWhite"
         android:textSize="24dp"
-        android:textStyle="bold"
-        android:text="Login" />
+        android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/signUPLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:autoLink="web"
-        android:linksClickable="true"
         android:layout_marginTop="30dp"
+        android:autoLink="web"
         android:lineSpacingExtra="10sp"
+        android:linksClickable="true"
+        android:onClick="onButtonClick"
+        android:text="@string/register_link"
         android:textColor="@color/colorRed"
-        android:textSize="26sp"
-        android:text="No account yet? Register!" />
+        android:textSize="26sp" />
 
 </LinearLayout>

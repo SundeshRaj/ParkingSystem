@@ -72,27 +72,38 @@
         android:inputType="time"
         android:textStyle="bold|italic" />
 
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Cart" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:checked="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Camera" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="History" />
+
     <Button
         android:id="@+id/button21"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:gravity="center_horizontal"
         android:background="@color/colorPrimary"
         android:padding="15dp"
         android:text="Modify"
         android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="Modified Successfully!"
-        android:textAlignment="center"
-        android:textColor="@color/colorNavyBlue"
-        android:textSize="18sp"
-        android:textStyle="bold" />
 
 </LinearLayout>
