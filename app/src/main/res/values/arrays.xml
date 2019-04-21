@@ -2,7 +2,7 @@
 <resources>
     <array name="UserRoleRegistrationScreen">
         <item>User</item>
-        <item>Parking Manager</item>
+        <item>ParkingManager</item>
         <item>Admin</item>
     </array>
 </resources>

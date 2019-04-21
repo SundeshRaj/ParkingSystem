@@ -4,22 +4,56 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.HashMap;
+
 public class LoginScreen extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DatabaseHelper helper = new DatabaseHelper(this);
     String userName;
+    HashMap<String, String> userDetails;
+    String user;
+    String pass;
+    UserSessionManager session;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
+        session = new UserSessionManager(getApplicationContext());
+        if(session.checkUserLoggedIn()) {
+            userDetails = session.getUserDetails();
+            user = userDetails.get(session.KEY_NAME);
+            pass = userDetails.get(session.KEY_PASS);
+            StringBuilder userRole = helper.login(user,pass);
+            if (userRole.toString().equalsIgnoreCase("User")) {
+                session.createUserLoginSession(user,pass);
+                Intent intent = new Intent(LoginScreen.this,UserHome.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+            else if (userRole.toString().equalsIgnoreCase("Admin")) {
+                session.createUserLoginSession(user,pass);
+                Intent intent = new Intent(LoginScreen.this,UserHome.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+            else if (userRole.toString().equalsIgnoreCase("ParkingManager")) {
+                session.createUserLoginSession(user,pass);
+                Intent intent = new Intent(LoginScreen.this,UserHome.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        }
     }
 
     public void onButtonClick(View view){
@@ -31,29 +65,32 @@ public class LoginScreen extends AppCompatActivity implements NavigationView.OnN
             String usernameStr = username.getText().toString();
             userName = usernameStr;
             String passwordStr = password.getText().toString();
-
-            String passwordVar = helper.searchPassword(usernameStr);
-            String systemUserRole = helper.getUserRole(userName);
-            if (passwordStr.equals(passwordVar)) {
-                if (systemUserRole.equalsIgnoreCase("user")) {
+            StringBuilder systemUserRole = helper.login(userName,passwordStr);
+                if (systemUserRole.toString().equalsIgnoreCase("User")) {
+                    session.createUserLoginSession(usernameStr, passwordStr);
                     Intent intent = new Intent(LoginScreen.this,UserHome.class);
-                    intent.putExtra("USERNAME",usernameStr);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    //intent.putExtra("USERNAME",usernameStr);
                     startActivity(intent);
                 }
-                //change to respective Home screens, currently all are directed to User Home screen
-                else if (systemUserRole.equalsIgnoreCase("admin")) {
+                else if (systemUserRole.toString().equalsIgnoreCase("Admin")) {
+                    session.createUserLoginSession(usernameStr, passwordStr);
                     Intent intent = new Intent(LoginScreen.this,UserHome.class);
-                    intent.putExtra("USERNAME",usernameStr);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    //intent.putExtra("USERNAME",usernameStr);
                     startActivity(intent);
                 }
-                else if (systemUserRole.equalsIgnoreCase("parking manager")) {
+                else if (systemUserRole.toString().equalsIgnoreCase("ParkingManager")) {
+                    session.createUserLoginSession(usernameStr, passwordStr);
                     Intent intent = new Intent(LoginScreen.this,UserHome.class);
-                    intent.putExtra("USERNAME",usernameStr);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    //intent.putExtra("USERNAME",usernameStr);
                     startActivity(intent);
                 }
-
-            }
-            else {
+            else if(systemUserRole.toString().equalsIgnoreCase("loginerror")){
                 Toast toast = Toast.makeText(LoginScreen.this , "Incorrect Login, Password or User Role" , Toast.LENGTH_LONG);
                 toast.show();
             }

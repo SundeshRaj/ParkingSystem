@@ -64,20 +64,27 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public String searchPassword(String username) {
-        sqliteDB = this.getReadableDatabase();
-        String fetchQuery = "SELECT Password FROM SYSTEMUSERTABLE WHERE Username='"+username.toLowerCase()+"';";
-        System.out.println("The username : "+username);
-        System.out.println("The fetch query : "+fetchQuery);
-        Cursor curs = sqliteDB.rawQuery(fetchQuery, null);
-        String passwordCheck ;
-        passwordCheck = curs.getString(0);
-        System.out.println("Sundesh Password returned : "+passwordCheck);
-        return passwordCheck;
-    }
 
-    public String getUserRole (String username) {
-        return "string";
+    public StringBuilder login (String username,String password) {
+        sqliteDB = this.getReadableDatabase();
+        String fetchQuery = "SELECT * FROM SYSTEMUSERTABLE WHERE Username='"+username.toLowerCase()+"' AND Password='"+password.toLowerCase()+"';";
+        Cursor curs = sqliteDB.rawQuery(fetchQuery, new String[]{});
+        StringBuilder role=new StringBuilder();
+        if (curs!=null) {
+            if (!(curs.moveToFirst()) || curs.getCount() == 0) {
+                role.append("loginerror");
+            } else {
+                curs.moveToFirst();
+
+                do {
+                    String value = curs.getString(4);
+                    role.append(value);
+                } while (curs.moveToNext());
+                curs.close();
+            }
+        }
+
+        return role;
     }
 
     @Override
