@@ -20,6 +20,10 @@
         </activity>
         <activity android:name=".RegistrationScreen"/>
         <activity android:name=".UserHome"/>
+        <activity android:name=".UserSearchParking"/>
+        <activity android:name=".UserSearchParkingResult"/>
+        <activity android:name=".AdminHome"/>
+        <activity android:name=".ParkingManagerHome"/>
     </application>
 
 </manifest>

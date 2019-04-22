@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/search_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="10sp"
+        android:padding="8dp"
+        android:layout_marginTop="10dp"
+        android:text="Search User"
+        android:textAlignment="center"
+        android:textColor="@color/colorNavyBlue"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="UserName"
+        android:text="sundesh"
+        android:textSize="25dp"
+        android:inputType="textPersonName"
+        android:gravity="center"
+        />
+    <Button
+        android:id="@+id/search"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary"
+        android:padding="8dp"
+        android:text="search"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        />
+
+    <!--<TextView-->
+        <!--android:id="@+id/pmParkingSpotDetailsText"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--android:textSize="20sp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="Username : saivarma" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/pmParkingSpotDetailsText0"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:text="UTA ID : 1001669341"-->
+        <!--android:gravity="center"-->
+        <!--android:textSize="20sp"/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/pmParkingSpotDetailsFName"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:textSize="20sp"-->
+        <!--android:text="Last Name : Raghavaraju"-->
+        <!--android:gravity="center"/>-->
+    <!--<TextView-->
+        <!--android:id="@+id/pmParkingSpotDetailsLName"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:textSize="20sp"-->
+        <!--android:text="First Name : Sai Varma"-->
+        <!--android:gravity="center"/>-->
+    <!--<TextView-->
+        <!--android:id="@+id/pmParkingSpotDetailsLName"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:textSize="20sp"-->
+        <!--android:text="Role : Parking User"-->
+        <!--android:gravity="center"/>-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_marginTop="20dp">-->
+
+        <!--<Button-->
+            <!--android:id="@+id/revoke"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentTop="false"-->
+            <!--android:background="@color/colorPrimaryDark"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--android:layout_weight="0.5"-->
+            <!--android:text="Revoke user"-->
+            <!--/>-->
+
+        <!--<Button-->
+            <!--android:id="@+id/changerole"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0.5"-->
+            <!--android:background="@color/colorPrimary"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--android:text="Change User Role"-->
+            <!--/>-->
+        <!--<Button-->
+            <!--android:id="@+id/edituser"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0.5"-->
+            <!--android:background="@color/colorPrimary"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--android:text="Edit details"-->
+            <!--/>-->
+    <!--</LinearLayout>-->
+
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/textView7"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="350dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="50dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginStart="20dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginTop="20dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="User Revoked Successfully"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textAlignment="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="@color/colorNavyBlue"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="18sp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textStyle="bold" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<Spinner&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/spinner"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginTop="15dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:backgroundTint="@color/colorBlue"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:dropDownWidth="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:entries="@array/user_roles"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:prompt="@string/role_prompt"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:scrollbarSize="20dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:spinnerMode="dropdown"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:visibility="visible" />&ndash;&gt;-->
+    <!--&lt;!&ndash;<Spinner&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/spinner"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginTop="15dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:backgroundTint="@color/colorBlue"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:dropDownWidth="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:entries="@array/user_roles"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:prompt="@string/role_prompt"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:scrollbarSize="20dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:spinnerMode="dropdown"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:visibility="visible" />&ndash;&gt;-->
+    <!--<TextView-->
+    <!--android:id="@+id/textView7"-->
+    <!--android:layout_width="350dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_marginStart="20dp"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:text="User Role changed successfully"-->
+    <!--android:textAlignment="center"-->
+    <!--android:textColor="@color/colorNavyBlue"-->
+    <!--android:textSize="18sp"-->
+    <!--android:textStyle="bold" />-->
+
+</LinearLayout>

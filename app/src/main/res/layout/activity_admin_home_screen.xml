@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorGrey"
@@ -19,29 +18,41 @@
             android:textStyle="bold"
             android:text="@string/app_name"/>
         <ImageButton
-            android:id="@+id/userHomeLogoutButton"
+            android:id="@+id/adminHomeScreenLogoutButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_menu_logout"
-            android:onClick="userHomeLogoutUser"
+            android:onClick="adminHomeScreenLogout"
             android:layout_gravity="right"/>
     </android.support.v7.widget.Toolbar>
 
     <TextView
-        android:id="@+id/parkingmanagerhomescreen"
+        android:id="@+id/admin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:lineSpacingExtra="10sp"
         android:padding="8dp"
         android:layout_marginTop="10dp"
-        android:text="Parking User Home Screen"
+        android:text="Admin"
         android:textAlignment="center"
         android:textColor="@color/colorNavyBlue"
         android:textSize="24sp"
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/pmViewProfile"
+        android:id="@+id/adsearchuser"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary"
+        android:padding="8dp"
+        android:text="Search User"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/adviewprofile"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="60dp"
@@ -49,32 +60,6 @@
         android:background="@color/colorPrimary"
         android:padding="8dp"
         android:text="View Profile"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold" />
-
-
-    <Button
-        android:id="@+id/userViewReservations"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorPrimary"
-        android:padding="8dp"
-        android:text="View Reservations"
-        android:textColor="@color/colorWhite"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/userSearchParking"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorPrimary"
-        android:onClick="userSearchParking"
-        android:padding="8dp"
-        android:text="Search Parking"
         android:textColor="@color/colorWhite"
         android:textStyle="bold" />
 

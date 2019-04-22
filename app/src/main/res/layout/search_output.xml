@@ -6,8 +6,29 @@
     android:background="@color/colorGrey"
     android:orientation="vertical">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorBlue">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="@string/app_name"/>
+        <ImageButton
+            android:id="@+id/userSearchResultLogoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_menu_logout"
+            android:onClick="userSearchResultLogout"
+            android:layout_gravity="right"/>
+    </android.support.v7.widget.Toolbar>
+
     <TextView
-        android:id="@+id/parkingmanagerhomescreen"
+        android:id="@+id/userSearchParkingOutput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -20,34 +41,37 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/pmRLText2"
+        android:id="@+id/usFromTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
-        android:text="Start Time : 07:00   End Time : 08:00"
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/textViewblah"
+        android:id="@+id/usToTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:text="Area : West Garage"
         android:textSize="16sp" />
+
     <TextView
-        android:id="@+id/textViewhasdf"
+        android:id="@+id/usParkingAreaName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:text="Floor : Second"
         android:textSize="16sp" />
     <TextView
-    android:id="@+id/textViewdsdfs"
+        android:id="@+id/usParkingFloor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="16sp" />
+    <TextView
+    android:id="@+id/usParkingType"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="20dp"
-    android:text="Type : Basic"
     android:textSize="16sp" />
 
     <CheckBox
@@ -85,17 +109,12 @@
         android:textStyle="bold|italic"
         android:textSize="25sp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-
     <Button
         android:id="@+id/button21"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:gravity="center_horizontal"
         android:background="@color/colorPrimary"
         android:padding="15dp"

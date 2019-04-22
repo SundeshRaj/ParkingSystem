@@ -7,6 +7,27 @@
     android:background="@color/colorGrey"
     android:orientation="vertical">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorBlue">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="@string/app_name"/>
+        <ImageButton
+            android:id="@+id/userSearchParkingLogoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_menu_logout"
+            android:onClick="userSearchParkingLogout"
+            android:layout_gravity="right"/>
+    </android.support.v7.widget.Toolbar>
+
     <TextView
         android:id="@+id/parkingmanagerhomescreen"
         android:layout_width="match_parent"
@@ -21,7 +42,7 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/userFromTime"
         android:layout_width="307dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -33,7 +54,7 @@
         android:textStyle="bold|italic" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/userToTime"
         android:layout_width="307dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -43,42 +64,43 @@
         android:textStyle="bold|italic" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/userParkingAreaName"
         android:layout_width="307dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"
         android:hint="West Garage"
-        android:inputType="time"
+        android:inputType="text"
         android:textStyle="bold|italic" />
 
     <EditText
-        android:id="@+id/editText8"
+        android:id="@+id/userParkingFloor"
         android:layout_width="307dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"
         android:hint="Second"
-        android:inputType="time"
+        android:inputType="text"
         android:textStyle="bold|italic" />
 
     <EditText
-        android:id="@+id/editText9"
+        android:id="@+id/userParkingType"
         android:layout_width="307dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"
         android:hint="Basic"
-        android:inputType="time"
+        android:inputType="text"
         android:textStyle="bold|italic" />
 
     <Button
-        android:id="@+id/button21"
+        android:id="@+id/userSearchParkingSpot"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center_horizontal"
         android:background="@color/colorPrimary"
+        android:onClick="userGetAvailableSpots"
         android:padding="15dp"
         android:text="Search Spot"
         android:textStyle="bold"/>

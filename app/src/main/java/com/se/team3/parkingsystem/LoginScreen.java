@@ -41,14 +41,14 @@ public class LoginScreen extends AppCompatActivity implements NavigationView.OnN
             }
             else if (userRole.toString().equalsIgnoreCase("Admin")) {
                 session.createUserLoginSession(user,pass);
-                Intent intent = new Intent(LoginScreen.this,UserHome.class);
+                Intent intent = new Intent(LoginScreen.this,AdminHome.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
             else if (userRole.toString().equalsIgnoreCase("ParkingManager")) {
                 session.createUserLoginSession(user,pass);
-                Intent intent = new Intent(LoginScreen.this,UserHome.class);
+                Intent intent = new Intent(LoginScreen.this,ParkingManagerHome.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
@@ -76,7 +76,7 @@ public class LoginScreen extends AppCompatActivity implements NavigationView.OnN
                 }
                 else if (systemUserRole.toString().equalsIgnoreCase("Admin")) {
                     session.createUserLoginSession(usernameStr, passwordStr);
-                    Intent intent = new Intent(LoginScreen.this,UserHome.class);
+                    Intent intent = new Intent(LoginScreen.this,AdminHome.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     //intent.putExtra("USERNAME",usernameStr);
@@ -84,7 +84,7 @@ public class LoginScreen extends AppCompatActivity implements NavigationView.OnN
                 }
                 else if (systemUserRole.toString().equalsIgnoreCase("ParkingManager")) {
                     session.createUserLoginSession(usernameStr, passwordStr);
-                    Intent intent = new Intent(LoginScreen.this,UserHome.class);
+                    Intent intent = new Intent(LoginScreen.this,ParkingManagerHome.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     //intent.putExtra("USERNAME",usernameStr);
