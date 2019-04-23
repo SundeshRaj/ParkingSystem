@@ -46,6 +46,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             "ParkingPermitType text , "+
             "Status text DEFAULT null); ";
 
+    private static final String PARKING_TABLE_CREATE = "CREATE TABLE PARKING (ParkingType text not null, ParkingArea text not null, Floor integer, Capacity integer not null, PRIMARY KEY(ParkingType,ParkingArea));";
+    private static final String RESERVATIONS_TABLE_CREATE = "CREATE TABLE RESERVATIONS (Username text not null,ParkingType text not null, ParkingArea text not null, Floor integer, Options text not null,SpotNumber integer not null,StartTime text not null,EndTime text not null,Date text not null,Fee integer not null, PRIMARY KEY(Username,ParkingType,ParkingArea,SpotNumber,StartTime,EndTime),FOREIGN KEY (Username) REFERENCES SYSTEMUSERTABLE(Username),FOREIGN KEY (ParkingType) REFERENCES PARKING(ParkingType),FOREIGN KEY (ParkingArea) REFERENCES PARKING(ParkingArea),FOREIGN KEY (Floor) REFERENCES PARKING(Floor) ); ";
+
     private SQLiteDatabase sqliteDB;
 
     public DatabaseHelper(Context context) {
@@ -55,12 +58,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL(TABLE_CREATE);
+        sqLiteDatabase.execSQL(PARKING_TABLE_CREATE);
+        sqLiteDatabase.execSQL(RESERVATIONS_TABLE_CREATE);
         //sqLiteDatabase.execSQL(EVENTREQUESTS_CREATE);
         this.sqliteDB = sqLiteDatabase;
         //String AdminInsertQuery = "INSERT INTO " + TABLE_NAME + " VALUES('jm123','james','Admin','james@gm.com','9087653456','jm123','Approved');";
         String AdminInsertQuery2 = "INSERT INTO " + SYSTEM_USER_TABLE_NAME + " VALUES('admin','admin','Admin','Admin','Admin','1001633297','5687651234','admin@mavs.uta.edu','101 Center Street','Arlington','Texas','76010','RCB7714','Basic','Approved');";
+        String AdminInsertQuery3 = "INSERT INTO PARKING VALUES('Basic','Maverick',null,350);";
         //sqLiteDatabase.execSQL(AdminInsertQuery);
         sqLiteDatabase.execSQL(AdminInsertQuery2);
+        sqLiteDatabase.execSQL(AdminInsertQuery3);
 
     }
 
@@ -85,6 +92,27 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
 
         return role;
+    }
+
+    public int getTotalSpots(String areaName, Integer floor, String areaType) {
+        sqliteDB = this.getReadableDatabase();
+        String fetchQuery = "SELECT * FROM PARKING;";
+        Cursor curs = sqliteDB.rawQuery(fetchQuery, new String[]{});
+        int capacity = 0;
+        if (curs!=null) {
+            if (!(curs.moveToFirst()) || curs.getCount() == 0) {
+                capacity = 0;
+            } else {
+                curs.moveToFirst();
+
+                do {
+                    String value = curs.getString(3);
+                    capacity = Integer.valueOf(value);
+                } while (curs.moveToNext());
+                curs.close();
+            }
+        }
+        return capacity;
     }
 
     @Override

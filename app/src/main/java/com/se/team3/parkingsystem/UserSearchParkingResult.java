@@ -1,12 +1,16 @@
 package com.se.team3.parkingsystem;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class UserSearchParkingResult extends AppCompatActivity {
 
+    DatabaseHelper helper = new DatabaseHelper(this);
     UserSessionManager session;
 
     @Override
@@ -23,8 +27,12 @@ public class UserSearchParkingResult extends AppCompatActivity {
         areaName.setText("Parking Area Name : "+bundle.getString("parkingAreaName"));
         TextView floor = (TextView)findViewById(R.id.usParkingFloor);
         floor.setText("Parking Floor : "+bundle.getString("parkingFloor"));
+        String tFloor = bundle.getString("parkingFloor");
         TextView type = (TextView)findViewById(R.id.usParkingType);
         type.setText("Parking Type : "+bundle.getString("parkingType"));
+        int totalSpots = helper.getTotalSpots(areaName.getText().toString(), Integer.valueOf(tFloor), type.getText().toString());
+        TextView availableSpots = (TextView)findViewById(R.id.usSpotsAvailableResult);
+        availableSpots.setText("Spots Available : " + totalSpots);
     }
 
     public void userSearchResultLogout (View view) {
