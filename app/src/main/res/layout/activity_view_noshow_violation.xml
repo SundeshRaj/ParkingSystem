@@ -6,6 +6,27 @@
     android:background="@color/colorGrey"
     android:orientation="vertical">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorBlue">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="@string/app_name"/>
+        <ImageButton
+            android:id="@+id/userNoShowLogoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_menu_logout"
+            android:onClick="userNoShowLogout"
+            android:layout_gravity="right"/>
+    </android.support.v7.widget.Toolbar>
+
     <TextView
         android:id="@+id/parkingmanagerhomescreen"
         android:layout_width="match_parent"

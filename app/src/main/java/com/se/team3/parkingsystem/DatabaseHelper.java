@@ -28,7 +28,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COL12_ZIP = "ZIP";
     private static final String COL13_LicencePlate = "LicencePlate";
     private static final String COL14_ParkingPermitType = "ParkingPermitType";
-    private static final String COL15_Status = "Status";
+    private static final String COL15_Status = "noshows";
 
     private static final String TABLE_CREATE = "CREATE TABLE SYSTEMUSERTABLE (Username text not null primary key, " +
             "Password text not null, "+
@@ -44,7 +44,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             "ZIP text , "+
             "LicencePlate text , "+
             "ParkingPermitType text , "+
-            "Status text DEFAULT null); ";
+            "noshows int DEFAULT 0); ";
 
     private static final String PARKING_TABLE_CREATE = "CREATE TABLE PARKING (ParkingType text not null, ParkingArea text not null, Floor integer, Capacity integer not null, PRIMARY KEY(ParkingType,ParkingArea,Floor));";
     private static final String RESERVATIONS_TABLE_CREATE = "CREATE TABLE RESERVATIONS (Username text not null, ReservationID text not null, ParkingType text not null, ParkingArea text not null, Floor integer, Cart integer, Camera integer, History integer, SpotNumber integer not null,StartTime text not null,EndTime text not null,Date text not null,Fee real not null, PRIMARY KEY(Username,ReservationID,ParkingType,ParkingArea,SpotNumber,StartTime,EndTime),FOREIGN KEY (Username) REFERENCES SYSTEMUSERTABLE(Username),FOREIGN KEY (ParkingType) REFERENCES PARKING(ParkingType),FOREIGN KEY (ParkingArea) REFERENCES PARKING(ParkingArea),FOREIGN KEY (Floor) REFERENCES PARKING(Floor)); ";
@@ -61,7 +61,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(PARKING_TABLE_CREATE);
         sqLiteDatabase.execSQL(RESERVATIONS_TABLE_CREATE);
         this.sqliteDB = sqLiteDatabase;
-        String AdminInsertQuery2 = "INSERT INTO " + SYSTEM_USER_TABLE_NAME + " VALUES('admin','admin','Admin','Admin','Admin','1001633297','5687651234','admin@mavs.uta.edu','101 Center Street','Arlington','Texas','76010','RCB7714','Basic','Approved');";
+        String AdminInsertQuery2 = "INSERT INTO " + SYSTEM_USER_TABLE_NAME + " VALUES('admin','admin','Admin','Admin','Admin','1001633297','5687651234','admin@mavs.uta.edu','101 Center Street','Arlington','Texas','76010','RCB7714','Basic',0);";
         String AdminInsertQuery3 = "INSERT INTO PARKING VALUES('Basic','Maverick',1,200);";
         String AdminInsertQuery4 = "INSERT INTO PARKING VALUES('Basic','WestGarage',5,250);";
         String AdminInsertQuery5 = "INSERT INTO PARKING VALUES('Midrange','WestGarage',4,750);";
@@ -159,7 +159,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COL12_ZIP, zip);
         values.put(COL13_LicencePlate, licencePlate);
         values.put(COL14_ParkingPermitType, permitType);
-        values.put(COL15_Status, "");
+        values.put(COL15_Status, 0);
         long insertResult = sqliteDB.insert(SYSTEM_USER_TABLE_NAME,null,values);
         if (insertResult == -1) {
             return false;
@@ -192,5 +192,68 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else {
             return true;
         }
+    }
+
+    public boolean upDateUserDetails(String user,String usernameString,String passwordString,String lnameString,String fnameString,String utaIDString,String phoneString,String emailString,String streetString,String cityString,String stateString){
+        sqliteDB = this.getWritableDatabase();
+        if((!usernameString.isEmpty())&&(!passwordString.isEmpty())&&(!lnameString.isEmpty())&&(!fnameString.isEmpty())&&(!utaIDString.isEmpty())&&(!phoneString.isEmpty())&&(!emailString.isEmpty())&&(!streetString.isEmpty())&&(!cityString.isEmpty())&&(!stateString.isEmpty())) {
+            String upDateQuery1 = "UPDATE SYSTEMUSERTABLE SET FirstName='" + fnameString + "' WHERE Username='" + user.toLowerCase() + "';";
+            String upDateQuery2 = "UPDATE SYSTEMUSERTABLE SET Password='" + passwordString + "' WHERE Username='" + user.toLowerCase() + "';";
+            String upDateQuery3 = "UPDATE SYSTEMUSERTABLE SET UTAID='" + utaIDString + "' WHERE Username='" + user.toLowerCase() + "';";
+            String upDateQuery4 = "UPDATE SYSTEMUSERTABLE SET PhoneNumber='" + phoneString + "' WHERE Username='" + user.toLowerCase() + "';";
+            String upDateQuery5 = "UPDATE SYSTEMUSERTABLE SET EmailID='" + emailString + "' WHERE Username='" + user.toLowerCase() + "';";
+            String upDateQuery6 = "UPDATE SYSTEMUSERTABLE SET Street='" + streetString + "' WHERE Username='" + user.toLowerCase() + "';";
+            String upDateQuery7 = "UPDATE SYSTEMUSERTABLE SET City='" + cityString + "' WHERE Username='" + user.toLowerCase() + "';";
+            String upDateQuery8 = "UPDATE SYSTEMUSERTABLE SET State='" + stateString + "' WHERE Username='" + user.toLowerCase() + "';";
+            String upDateQuery9 = "UPDATE SYSTEMUSERTABLE SET Username='" + usernameString + "' WHERE Username='" + user.toLowerCase() + "';";
+            String upDateQuery = "UPDATE SYSTEMUSERTABLE SET LastName='" + lnameString + "' WHERE Username='" + user.toLowerCase() + "';";
+            sqliteDB.execSQL(upDateQuery);
+            sqliteDB.execSQL(upDateQuery1);
+            sqliteDB.execSQL(upDateQuery2);
+            sqliteDB.execSQL(upDateQuery3);
+            sqliteDB.execSQL(upDateQuery4);
+            sqliteDB.execSQL(upDateQuery5);
+            sqliteDB.execSQL(upDateQuery6);
+            sqliteDB.execSQL(upDateQuery7);
+            sqliteDB.execSQL(upDateQuery8);
+            sqliteDB.execSQL(upDateQuery9);
+            sqliteDB.close();
+            return true;
+        }
+        else
+            return false;
+    }
+
+    public String[] profileDetails(String username) {
+        sqliteDB = this.getReadableDatabase();
+        String fetchQuery = "SELECT * FROM SYSTEMUSERTABLE WHERE Username='" + username.toLowerCase() + "';";
+        Cursor curs = sqliteDB.rawQuery(fetchQuery, new String[]{});
+        String details[]=new String[20];
+        if (curs != null) {
+
+            curs.moveToFirst();
+
+            do {
+                details[0] = curs.getString(0);
+                details[1] = curs.getString(1);
+                details[2] = curs.getString(2);
+                details[3]= curs.getString(3);
+                details[4] = curs.getString(4);
+                details[5] = curs.getString(5);
+                details[6] = curs.getString(6);
+                details[7] = curs.getString(7);
+                details[8] = curs.getString(8);
+                details[9] = curs.getString(9);
+                details[10] = curs.getString(10);
+                details[11] = curs.getString(11);
+                details[12] = curs.getString(12);
+                details[13] = curs.getString(13);
+                details[14]= Integer.toString((curs.getInt(14)));
+                //details[15]= Integer.toString((curs.getInt(15)));
+
+            } while (curs.moveToNext());
+            curs.close();
+        }
+        return details;
     }
 }

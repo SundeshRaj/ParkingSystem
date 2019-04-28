@@ -22,6 +22,26 @@ public class UserHome extends AppCompatActivity {
         }
     }
 
+    public void viewUserProfile(View view) {
+        if ((view.getId() == R.id.userViewProfile)) {
+
+            Intent intent = new Intent(UserHome.this, System_User_Profile.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+
+        }
+    }
+    public void viewNoShowViolations (View view) {
+        if (view.getId() == R.id.viewnoshow) {
+            Intent intent = new Intent(UserHome.this, ViewNoShow.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            //UserHome.this.startActivity(intent);
+            startActivity(intent);
+        }
+    }
+
     public void userSearchParking (View view) {
         if (view.getId() == R.id.userSearchParking) {
             Intent intent = new Intent(UserHome.this, UserSearchParking.class );

@@ -4,6 +4,27 @@
     android:layout_height="match_parent"
     android:background="@color/colorGrey" >
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorBlue">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="@string/app_name"/>
+        <ImageButton
+            android:id="@+id/updateProfileLogoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_menu_logout"
+            android:onClick="updateProfileLogout"
+            android:layout_gravity="right"/>
+    </android.support.v7.widget.Toolbar>
+
     <TextView
         android:id="@+id/updateProfile"
         android:layout_width="match_parent"
@@ -45,15 +66,16 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp" >
+
         <TextView
             android:id="@+id/registrationPageText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:lineSpacingExtra="10sp"
+            android:text="Password:"
             android:textColor="@color/colorNavyBlue"
-            android:textSize="14sp"
-            android:text="Password:" />
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/registrationPageEditText2"
@@ -61,9 +83,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:ems="10"
-            android:textSize="14sp"
-            android:inputType="textPersonName"
-            android:text="***********" />
+            android:inputType="textPersonName|textPassword"
+            android:text="***********"
+            android:textSize="14sp" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
@@ -259,16 +281,17 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/loginButton"
+        android:id="@+id/sysUserUpdateButton"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:background="@color/colorPrimary"
+        android:onClick="updatePro"
         android:padding="10dp"
+        android:text="Update"
         android:textColor="@color/colorWhite"
         android:textSize="22dp"
-        android:textStyle="bold"
-        android:text="Update" />
+        android:textStyle="bold" />
 
 </LinearLayout>

@@ -118,19 +118,19 @@ public class UserReservationSuccessful extends AppCompatActivity {
         }
 
         if (parkingType.equalsIgnoreCase("Basic")) {
-            basicFee = mins*0.03;
+            basicFee = mins*0.3;
             totalFee = basicFee+cart+camera+history;
         }
         else if (parkingType.equalsIgnoreCase("Access")) {
-            accessFee = mins*0.04;
+            accessFee = mins*0.4;
             totalFee = accessFee+camera+cart+history;
         }
         else if (parkingType.equalsIgnoreCase("Midrange")) {
-            midRangeFee = mins*0.05;
+            midRangeFee = mins*0.5;
             totalFee = midRangeFee+cart+camera+history;
         }
         else if (parkingType.equalsIgnoreCase("Premium")) {
-            premiumFee = mins*0.07;
+            premiumFee = mins*0.7;
             totalFee = premiumFee+cart+camera+history;
         }
         return totalFee;

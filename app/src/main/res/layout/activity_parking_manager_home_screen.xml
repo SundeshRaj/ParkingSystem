@@ -48,6 +48,7 @@
         android:layout_marginTop="30dp"
         android:background="@color/colorPrimary"
         android:padding="8dp"
+        android:onClick="viewProfilePM"
         android:text="View Profile"
         android:textColor="@color/colorWhite"
         android:textStyle="bold" />

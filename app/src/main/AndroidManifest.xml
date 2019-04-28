@@ -25,6 +25,9 @@
         <activity android:name=".AdminHome"/>
         <activity android:name=".ParkingManagerHome"/>
         <activity android:name=".UserReservationSuccessful"/>
+        <activity android:name=".System_User_Profile"/>
+        <activity android:name=".ViewNoShow"/>
+        <activity android:name=".UpdateProfile"/>
     </application>
 
 </manifest>

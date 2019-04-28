@@ -4,6 +4,27 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorBlue">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="@string/app_name"/>
+        <ImageButton
+            android:id="@+id/userProfileScreenLogoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_menu_logout"
+            android:onClick="userProfileScreenLogout"
+            android:layout_gravity="right"/>
+    </android.support.v7.widget.Toolbar>
+
     <TextView
         android:id="@+id/systemUserProfile"
         android:layout_width="match_parent"
@@ -21,19 +42,36 @@
         android:id="@+id/pmParkingSpotDetailsText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:layout_marginStart="20dp"
-        android:textSize="22sp"
-        android:text="Username : sundesh" />
+        android:layout_marginTop="30dp"
+        android:text="Username : sundesh"
+        android:textSize="22sp" />
 
-    <TextView
-        android:id="@+id/pmParkingSpotDetailsText33"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:textSize="22sp"
-        android:text="Password : ***********" />
+        android:orientation="horizontal">
 
+        <TextView
+            android:id="@+id/pmParkingSpotDetailsText8"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Password : "
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/pmParkingSpotDetailsText33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:inputType="textPassword"
+            android:text="***********"
+            android:textSize="22sp" />
+    </LinearLayout>
     <TextView
         android:id="@+id/pmParkingSpotDetailsText0"
         android:layout_width="match_parent"
@@ -114,17 +152,25 @@
         android:textSize="22sp"
         android:text="Licence Plate : TTK 7655" />-->
 
+    <TextView
+        android:id="@+id/userLicencePlate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="22sp" />
+
     <Button
-        android:id="@+id/loginButton"
+        android:id="@+id/userUpdateProfileButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:background="@color/colorPrimary"
+        android:onClick="updateProfile"
         android:padding="15dp"
+        android:text="Update Profile"
         android:textColor="@color/colorWhite"
         android:textSize="24dp"
-        android:textStyle="bold"
-        android:text="Update Profile" />
+        android:textStyle="bold" />
 
 </LinearLayout>
