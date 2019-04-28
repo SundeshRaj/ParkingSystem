@@ -75,21 +75,21 @@
     android:textSize="16sp" />
 
     <CheckBox
-        android:id="@+id/checkBox4"
+        android:id="@+id/usCartCheckBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:text="Cart" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/usCameraCheckbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:text="Camera" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/usHistoryCheckBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -109,7 +109,7 @@
         android:textSize="25sp" />
 
     <Button
-        android:id="@+id/button21"
+        android:id="@+id/usReserveParkingSpotButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -117,6 +117,7 @@
         android:gravity="center_horizontal"
         android:background="@color/colorPrimary"
         android:padding="15dp"
+        android:onClick="userReserveParkingSpot"
         android:text="Reserve Spot"
         android:textSize="15sp"
         android:textStyle="bold"/>

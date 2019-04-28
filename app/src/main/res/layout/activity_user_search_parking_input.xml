@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"
-        android:hint="7:00"
+        android:hint="07:00"
         android:inputType="time"
         android:textAllCaps="false"
         android:textIsSelectable="true"
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"
-        android:hint="8:00"
+        android:hint="08:00"
         android:inputType="time"
         android:textStyle="bold|italic" />
 
@@ -69,7 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"
-        android:hint="West Garage"
+        android:hint="Maverick/Davis/Nedderman/.."
         android:inputType="text"
         android:textStyle="bold|italic" />
 
@@ -79,7 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"
-        android:hint="Second"
+        android:hint="1/2/3/4"
         android:inputType="text"
         android:textStyle="bold|italic" />
 
@@ -89,7 +89,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"
-        android:hint="Basic"
+        android:hint="Basic/Premium/Midrange"
         android:inputType="text"
         android:textStyle="bold|italic" />
 

@@ -46,8 +46,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             "ParkingPermitType text , "+
             "Status text DEFAULT null); ";
 
-    private static final String PARKING_TABLE_CREATE = "CREATE TABLE PARKING (ParkingType text not null, ParkingArea text not null, Floor integer, Capacity integer not null, PRIMARY KEY(ParkingType,ParkingArea));";
-    private static final String RESERVATIONS_TABLE_CREATE = "CREATE TABLE RESERVATIONS (Username text not null,ParkingType text not null, ParkingArea text not null, Floor integer, Options text not null,SpotNumber integer not null,StartTime text not null,EndTime text not null,Date text not null,Fee integer not null, PRIMARY KEY(Username,ParkingType,ParkingArea,SpotNumber,StartTime,EndTime),FOREIGN KEY (Username) REFERENCES SYSTEMUSERTABLE(Username),FOREIGN KEY (ParkingType) REFERENCES PARKING(ParkingType),FOREIGN KEY (ParkingArea) REFERENCES PARKING(ParkingArea),FOREIGN KEY (Floor) REFERENCES PARKING(Floor) ); ";
+    private static final String PARKING_TABLE_CREATE = "CREATE TABLE PARKING (ParkingType text not null, ParkingArea text not null, Floor integer, Capacity integer not null, PRIMARY KEY(ParkingType,ParkingArea,Floor));";
+    private static final String RESERVATIONS_TABLE_CREATE = "CREATE TABLE RESERVATIONS (Username text not null, ReservationID text not null, ParkingType text not null, ParkingArea text not null, Floor integer, Cart integer, Camera integer, History integer, SpotNumber integer not null,StartTime text not null,EndTime text not null,Date text not null,Fee real not null, PRIMARY KEY(Username,ReservationID,ParkingType,ParkingArea,SpotNumber,StartTime,EndTime),FOREIGN KEY (Username) REFERENCES SYSTEMUSERTABLE(Username),FOREIGN KEY (ParkingType) REFERENCES PARKING(ParkingType),FOREIGN KEY (ParkingArea) REFERENCES PARKING(ParkingArea),FOREIGN KEY (Floor) REFERENCES PARKING(Floor)); ";
 
     private SQLiteDatabase sqliteDB;
 
@@ -60,15 +60,33 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(TABLE_CREATE);
         sqLiteDatabase.execSQL(PARKING_TABLE_CREATE);
         sqLiteDatabase.execSQL(RESERVATIONS_TABLE_CREATE);
-        //sqLiteDatabase.execSQL(EVENTREQUESTS_CREATE);
         this.sqliteDB = sqLiteDatabase;
-        //String AdminInsertQuery = "INSERT INTO " + TABLE_NAME + " VALUES('jm123','james','Admin','james@gm.com','9087653456','jm123','Approved');";
         String AdminInsertQuery2 = "INSERT INTO " + SYSTEM_USER_TABLE_NAME + " VALUES('admin','admin','Admin','Admin','Admin','1001633297','5687651234','admin@mavs.uta.edu','101 Center Street','Arlington','Texas','76010','RCB7714','Basic','Approved');";
-        String AdminInsertQuery3 = "INSERT INTO PARKING VALUES('Basic','Maverick',null,350);";
-        //sqLiteDatabase.execSQL(AdminInsertQuery);
+        String AdminInsertQuery3 = "INSERT INTO PARKING VALUES('Basic','Maverick',1,200);";
+        String AdminInsertQuery4 = "INSERT INTO PARKING VALUES('Basic','WestGarage',5,250);";
+        String AdminInsertQuery5 = "INSERT INTO PARKING VALUES('Midrange','WestGarage',4,750);";
+        String AdminInsertQuery6 = "INSERT INTO PARKING VALUES('Midrange','WestGarage',3,750);";
+        String AdminInsertQuery7 = "INSERT INTO PARKING VALUES('Midrange','WestGarage',2,750);";
+        String AdminInsertQuery8 = "INSERT INTO PARKING VALUES('Premium','WestGarage',1,230);";
+        String AdminInsertQuery9 = "INSERT INTO PARKING VALUES('Access','WestGarage',1,20);";
+        String AdminInsertQuery10 = "INSERT INTO PARKING VALUES('Access','Maverick',1,20);";
+        String AdminInsertQuery11 = "INSERT INTO PARKING VALUES('Basic','Davis',1,150);";
+        String AdminInsertQuery12 = "INSERT INTO PARKING VALUES('Access','Davis',1,20);";
+        String AdminInsertQuery13 = "INSERT INTO PARKING VALUES('Access','Nedderman',1,20);";
+        String AdminInsertQuery14 = "INSERT INTO PARKING VALUES('Basic','Nedderman',1,180);";
         sqLiteDatabase.execSQL(AdminInsertQuery2);
         sqLiteDatabase.execSQL(AdminInsertQuery3);
-
+        sqLiteDatabase.execSQL(AdminInsertQuery4);
+        sqLiteDatabase.execSQL(AdminInsertQuery5);
+        sqLiteDatabase.execSQL(AdminInsertQuery6);
+        sqLiteDatabase.execSQL(AdminInsertQuery7);
+        sqLiteDatabase.execSQL(AdminInsertQuery8);
+        sqLiteDatabase.execSQL(AdminInsertQuery9);
+        sqLiteDatabase.execSQL(AdminInsertQuery10);
+        sqLiteDatabase.execSQL(AdminInsertQuery11);
+        sqLiteDatabase.execSQL(AdminInsertQuery12);
+        sqLiteDatabase.execSQL(AdminInsertQuery13);
+        sqLiteDatabase.execSQL(AdminInsertQuery14);
     }
 
 
@@ -96,8 +114,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public int getTotalSpots(String areaName, Integer floor, String areaType) {
         sqliteDB = this.getReadableDatabase();
-        String fetchQuery = "SELECT * FROM PARKING;";
-        Cursor curs = sqliteDB.rawQuery(fetchQuery, new String[]{});
+        String fetchQuery = "SELECT * FROM PARKING WHERE ParkingArea='" + areaName + "' AND ParkingType='" + areaType + "' AND Floor=" + floor + ";";
+        Cursor curs = sqliteDB.rawQuery(fetchQuery, null);
         int capacity = 0;
         if (curs!=null) {
             if (!(curs.moveToFirst()) || curs.getCount() == 0) {
@@ -106,8 +124,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 curs.moveToFirst();
 
                 do {
-                    String value = curs.getString(3);
-                    capacity = Integer.valueOf(value);
+                    int value = curs.getInt(3);
+                    capacity = value;
                 } while (curs.moveToNext());
                 curs.close();
             }
@@ -143,6 +161,31 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COL14_ParkingPermitType, permitType);
         values.put(COL15_Status, "");
         long insertResult = sqliteDB.insert(SYSTEM_USER_TABLE_NAME,null,values);
+        if (insertResult == -1) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+    public boolean insertUserReservation (String username, String reservationID, String parkingType, String parkingAreaName, int floor, String cartCheck, String cameraCheck, String historyCheck, int spotNumber, String startTime, String endTime, String localDate, double parkingFee) {
+        sqliteDB = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("Username", username);
+        values.put("ReservationID", reservationID);
+        values.put("ParkingType", parkingType);
+        values.put("ParkingArea", parkingAreaName);
+        values.put("Floor", floor);
+        values.put("Cart", cartCheck);
+        values.put("Camera", cameraCheck);
+        values.put("History", historyCheck);
+        values.put("SpotNumber", spotNumber);
+        values.put("StartTime", startTime);
+        values.put("EndTime", endTime);
+        values.put("Date", localDate);
+        values.put("Fee", parkingFee);
+        long insertResult = sqliteDB.insert("RESERVATIONS",null,values);
         if (insertResult == -1) {
             return false;
         }

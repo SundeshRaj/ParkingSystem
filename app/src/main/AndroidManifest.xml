@@ -24,6 +24,7 @@
         <activity android:name=".UserSearchParkingResult"/>
         <activity android:name=".AdminHome"/>
         <activity android:name=".ParkingManagerHome"/>
+        <activity android:name=".UserReservationSuccessful"/>
     </application>
 
 </manifest>
